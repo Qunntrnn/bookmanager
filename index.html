@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="renderListBooks()">
+
+    <div class="form-book" >
+        <h3>Thông tin sách</h3>
+
+        <label>Tên Sách</label>
+        <input type="text" id="bookname">
+        <br>
+
+        <label>Tác Giả</label>
+        <input type="text" id="tacgia">
+        <br>
+
+        <label>Nhà xuất bản</label>
+        <input type="text" id="nxb">
+        <br>
+
+        <label>Số lượng</label>
+        <input type="text" id="soluong">
+        <br>
+
+        <label>Giá</label>
+        <input type="text" id="price">
+        <br>
+
+        <input id="index" type="hidden">
+
+        <label>&nbsp;</label>
+        <button id="save" onclick="save()">Lưu</button>
+        <button id="update" onclick="updateBook()" style="display: none;">Sửa</button>
+    </div>
+
+    <div class="list-book" id="list-book">
+        <h3>LIST BOOK</h3>
+        <table id="grid-book">
+        </table>
+    </div>
+
+    
+
+
+
+    
+    <script src="book.js"></script>
+</body>
+</html>

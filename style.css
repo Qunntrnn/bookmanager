@@ -1,0 +1,40 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-book , .list-book {
+    width: 600px;
+    border: 1px solid black;
+    margin: 25px;
+    padding: 10px;
+    float: left;
+}
+
+.form-book h3 {
+    padding: 0;
+    margin-top: 0px;
+}
+
+.form-book label {
+    width: 150px;
+    float: left;
+}
+
+.form-book input , button {
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.list-book table {
+    width: 600px;
+    border: 1px;
+}
+.list-book table td,tr {
+    border: 1px solid black;
+}
