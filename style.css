@@ -27,6 +27,10 @@ body {
     padding: 5px;
 }
 
+.form-book span {
+    color: red;
+}
+
 button {
     margin-top: 10px;
 }

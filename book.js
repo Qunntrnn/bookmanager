@@ -5,9 +5,61 @@ function save() {
     let soluong = document.getElementById('soluong').value ;
     let price = document.getElementById('price').value ;
 
+    if (bookname == "") {
+        document.getElementById('bookname-error').innerHTML = 'vui lòng nhập tên sách' ;
+    } else {
+        document.getElementById('bookname-error').innerHTML = '' ;
+    }
+
+    if (tacgia == "") {
+        document.getElementById('tacgia-error').innerHTML = 'vui lòng nhập tên tác giả' ;
+    } else {
+        document.getElementById('tacgia-error').innerHTML = '' ;
+    }
+
+    if (nxb == "") {
+        document.getElementById('nxb-error').innerHTML = 'vui lòng nhập nhà xuất bản' ;
+    } else {
+        document.getElementById('nxb-error').innerHTML = '' ;
+    }
+
+    if (soluong == "") {
+        document.getElementById('soluong-error').innerHTML = 'vui lòng nhập số lượng' ;
+    } else {
+        if(isNaN(soluong)) {
+            document.getElementById('soluong-error').innerHTML = 'số lượng không hợp lệ' ;
+            return; 
+        } else {
+            document.getElementById('soluong-error').innerHTML = '' ;
+        } 
+        
+    }
+
+    if (price == "") {
+        document.getElementById('price-error').innerHTML = 'vui lòng nhập giá' ;
+    } else {
+        if(isNaN(price)) {
+            document.getElementById('price-error').innerHTML = 'giá không hợp lệ' ;
+            return;
+        } else {
+            document.getElementById('price-error').innerHTML = '' ;
+        }
+    }
+    
+
+
+
+
+
+
+
+
     console.log(bookname , tacgia , nxb , soluong , price);
+    
+
 
     if (bookname && tacgia && nxb && soluong && price) {
+
         
         let books = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [] ;
         
